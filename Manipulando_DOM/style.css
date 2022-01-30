@@ -1,0 +1,133 @@
+:root{
+    --light: #f0f0f0;
+    --light2: darkgray;
+    --lightFontColor: #303030;
+    --lightHover: lightsalmon;
+
+    --dark: #505050;
+    --dark2: #202020;
+    --darkFontColor: lightgray;
+    --darkHover: limegreen;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: monospace;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button{
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 100ms, background-color 300ms, transform 100ms;
+    padding: 8px 16px;
+}
+
+footer{
+    width: 100%;
+    padding: 30px;
+
+    position: absolute;
+    bottom: 0px;
+}
+
+/*LIGHT GRAY*/
+.lightMode{
+    color: var(--lightFontColor);
+}
+
+body.lightMode{
+    background-image: linear-gradient(to bottom, var(--light2), var(--light));
+}
+
+h1.lightMode{
+    color: var(--lightFontColor);
+}
+
+button.lightMode{
+    background-color: var(--light2);
+    box-shadow: 0px 5px gray;
+}
+
+button.lightMode:hover{
+    background-color: var(--lightHover);
+}
+
+button.lightMode:active{
+    box-shadow: 0px 0px gray;
+    transform: translateY(5px);
+}
+
+footer.lightMode{
+    background-color: var(--light2);
+}
+
+a.lightMode{
+    color: var(--lightFontColor);
+    background-color: transparent;
+}
+
+a.lightMode:hover{
+    color: var(--lightHover);
+}
+
+
+/*DARK MODE*/
+.darkMode{
+    color: var(--darkFontColor);
+}
+
+body.darkMode{
+    background-image: linear-gradient(to bottom, var(--dark), var(--dark2));
+}
+
+h1.darkMode{
+    color: var(--darkFontColor);
+}
+
+button.darkMode{
+    background-color: var(--dark);
+    box-shadow: 0px 5px var(--dark2);
+}
+
+button.darkMode:hover{
+    background-color: var(--darkHover);
+}
+
+button.darkMode:active{
+    box-shadow: 0px 0px var(--dark2);
+    transform: translateY(5px);
+}
+
+footer.darkMode{
+    background-color: var(--dark2);
+}
+
+a.darkMode{
+    color: var(--darkFontColor);
+    background-color: transparent;
+}
+
+a.darkMode:hover{
+    color: var(--darkHover);
+}
